@@ -1,0 +1,40 @@
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Style the input label */
+.form-group x-input-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Style the select input */
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3rem;
+}
+
+/* Style the form control icon */
+.form-control-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Make sure the icon doesn't interfere with select input */
+}
+
+/* Style the error message */
+.invalid-feedback {
+    color: #dc3545;
+    display: block;
+    margin-top: 4px;
+}
+
+/* Style the select input when there's an error */
+.form-group.is-invalid select {
+    border-color: #dc3545;
+}

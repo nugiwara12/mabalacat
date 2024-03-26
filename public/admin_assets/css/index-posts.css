@@ -1,0 +1,26 @@
+.button-delete {
+    display: inline-block;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.button-delete form {
+    display: inline;
+}
+
+.button-delete button {
+    background-color: #fff;
+    color: #e53e3e;
+    border: 1px solid #e53e3e;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    outline: none;
+}
+
+.button-delete button:hover {
+    background-color: #e53e3e;
+    color: #fff;
+}
