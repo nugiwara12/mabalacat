@@ -41,6 +41,22 @@
                 title="Announcement">Announcements</span></a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('VOUPRO:CHAT-BOX') }}" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chat"
+                viewBox="0 0 16 16">
+                <path
+                    d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894m-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z" />
+            </svg>
+
+            <span class="sidebar-icon" style="color:#FFFFFF" data-toggle="tooltip" data-placement="top"
+                title="Chat-Box">Chat-Box</span>
+        </a>
+    </li>
+
+
+
+
 
     <?php /*----------------------------------------ADMIN-------------------------------------------------------*/ ?>
 
@@ -73,30 +89,6 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-            aria-expanded="true" aria-controls="collapseUtilities">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-filetype-doc"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M14 4.5V14a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zm-7.839 9.166v.522c0 .256-.039.47-.117.641a.861.861 0 0 1-.322.387.877.877 0 0 1-.469.126.883.883 0 0 1-.471-.126.868.868 0 0 1-.32-.386 1.55 1.55 0 0 1-.117-.642v-.522c0-.257.04-.471.117-.641a.868.868 0 0 1 .32-.387.868.868 0 0 1 .471-.129c.176 0 .332.043.469.13a.861.861 0 0 1 .322.386c.078.17.117.384.117.641Zm.803.519v-.513c0-.377-.068-.7-.205-.972a1.46 1.46 0 0 0-.589-.63c-.254-.147-.56-.22-.917-.22-.355 0-.662.073-.92.22a1.441 1.441 0 0 0-.589.627c-.136.271-.205.596-.205.975v.513c0 .375.069.7.205.973.137.271.333.48.59.627.257.144.564.216.92.216.357 0 .662-.072.916-.216.256-.147.452-.356.59-.627.136-.274.204-.598.204-.973ZM0 11.926v4h1.459c.402 0 .735-.08.999-.238a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.59-.68c-.263-.156-.598-.234-1.004-.234H0Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.141 1.141 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082H.79V12.57Zm7.422.483a1.732 1.732 0 0 0-.103.633v.495c0 .246.034.455.103.627a.834.834 0 0 0 .298.393.845.845 0 0 0 .478.131.868.868 0 0 0 .401-.088.699.699 0 0 0 .273-.248.8.8 0 0 0 .117-.364h.765v.076a1.268 1.268 0 0 1-.226.674c-.137.194-.32.345-.55.454a1.81 1.81 0 0 1-.786.164c-.36 0-.664-.072-.914-.216a1.424 1.424 0 0 1-.571-.627c-.13-.272-.194-.597-.194-.976v-.498c0-.379.066-.705.197-.978.13-.274.321-.485.571-.633.252-.149.556-.223.911-.223.219 0 .421.032.607.097.187.062.35.153.489.272a1.326 1.326 0 0 1 .466.964v.073H9.78a.85.85 0 0 0-.12-.38.7.7 0 0 0-.273-.261.802.802 0 0 0-.398-.097.814.814 0 0 0-.475.138.868.868 0 0 0-.301.398Z" />
-            </svg>
-            <span class="sidebar-icon" style="color:#FFFFFF" data-toggle="tooltip" data-placement="top"
-                title="Main Log Book">Main Log Book</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Voucher Records:</h6>
-                <a class="collapse-item" href="#" data-toggle="tooltip" data-placement="top"
-                    title="General Funds">General Funds</a>
-                <a class="collapse-item" href="#" data-toggle="tooltip" data-placement="top"
-                    title="Special Educational Funds">Special <br> Educational <br> Funds</a>
-                <a class="collapse-item" href="#" data-toggle="tooltip" data-placement="top" title="Trust Funds">Trust
-                    Funds</a>
-            </div>
-        </div>
-    </li>
-
-    <li class="nav-item">
         <a class="nav-link" href="{{ route('VOUPRO:CHAT-BOX') }}" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chat"
                 viewBox="0 0 16 16">
@@ -104,20 +96,10 @@
                     d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894m-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z" />
             </svg>
 
-            <!--<span class="badge badge-danger badge-counter" id="notification-badge">-->
-            <!--    @if(auth()->check() && in_array(auth()->user()->role, ['Admin', 'Pre-Audit', 'Post-Audit', 'Releasing', 'Encoder', 'Document Representative']))-->
-            <!--        {{ \App\Models\ChMessage::count() }}-->
-            <!--    @else-->
-            <!--        0-->
-            <!--    @endif-->
-            <!--</span>-->
-
             <span class="sidebar-icon" style="color:#FFFFFF" data-toggle="tooltip" data-placement="top"
                 title="Chat-Box">Chat-Box</span>
         </a>
     </li>
-
-
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('activity/log') }}">
@@ -132,11 +114,76 @@
             <span class="sidebar-icon" style="color:#FFFFFF" data-toggle="tooltip" data-placement="top"
                 title="Activity Log">Activity Log</span></a>
     </li>
-
-
     @endif
 
 
+    @if (Auth::user()->role=='User')
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+            aria-controls="collapseTwo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-person"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z" />
+            </svg>
+            <span class="sidebar-icon" style="color:#FFFFFF" data-toggle="tooltip" data-placement="top"
+                title="Student Name">Student Name</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Role Types</h6>
+                <a class="collapse-item" href="{{ route('christians')}}" data-toggle="tooltip" data-placement="top"
+                    title="Christian Joseph Sarmiento">Christian Joseph <br> Sarmiento</a>
+            </div>
+        </div>
+    </li>
+    @endif
+
+    @if (Auth::user()->role=='Student')
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+            aria-controls="collapseTwo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-person"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z" />
+            </svg>
+            <span class="sidebar-icon" style="color:#FFFFFF" data-toggle="tooltip" data-placement="top"
+                title="Student Name">Student Name</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Role Types</h6>
+                <a class="collapse-item" href="{{ route('julius')}}" data-toggle="tooltip" data-placement="top"
+                    title="Julius">Julius</a>
+                <a class="collapse-item" href="{{ route('joshuas')}}" data-toggle="tooltip" data-placement="top"
+                    title="Joshuas">Joshuas</a>
+            </div>
+        </div>
+    </li>
+    @endif
+
+    @if (Auth::user()->role=='Council')
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+            aria-controls="collapseTwo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-person"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z" />
+            </svg>
+            <span class="sidebar-icon" style="color:#FFFFFF" data-toggle="tooltip" data-placement="top"
+                title="Student Name">Student Name</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Role Types</h6>
+                <a class="collapse-item" href="{{ route('joshuas')}}" data-toggle="tooltip" data-placement="top"
+                    title="Joshuas">Joshuas</a>
+            </div>
+        </div>
+    </li>
+    @endif
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
@@ -146,6 +193,4 @@
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
 </ul>
-
-
 @endauth
