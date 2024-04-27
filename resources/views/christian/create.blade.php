@@ -51,10 +51,12 @@
                             <select name="subject" id="subject"
                                 class="form-control @error('subject') is-invalid @enderror">
                                 <option value="" selected disabled>Select Subject</option>
-                                <option value="Math">Math</option>
-                                <option value="Science">Science</option>
-                                <option value="Pe">Pe</option>
-                                <option value="Capstone">Capstone</option>
+                                <option value="Philosopy">Philosopy</option>
+                                <option value="EAPP">EAPP</option>
+                                <option value="EAPP">Java</option>
+                                <option value="Entrep">Entrep</option>
+                                <option value="Emersion">Emersion</option>
+                                <option value="I-I-I">I-I-I</option>
                             </select>
                             @error('subject')
                             <span class="invalid-feedback" role="alert">

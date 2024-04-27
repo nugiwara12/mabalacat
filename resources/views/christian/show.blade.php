@@ -53,43 +53,50 @@
                     <!-- New input fields -->
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" name="subject" id="subject"
-                            class="form-control @error('subject') is-invalid @enderror"
-                            value="{{ $christian->subject }}" readonly>
+                        <select name="subject" id="subject" class="form-control @error('subject') is-invalid @enderror"
+                            readonly>
+                            <option value="" selected disabled>Select Subject</option>
+                            <option value="Philosopy">Philosopy</option>
+                            <option value="EAPP">EAPP</option>
+                            <option value="EAPP">Java</option>
+                            <option value="Entrep">Entrep</option>
+                            <option value="Emersion">Emersion</option>
+                            <option value="I-I-I">I-I-I</option>
+                        </select>
                         @error('subject')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
                     </div>
-                    <div class="form-group">
-                        <label for="grade">Grade</label>
-                        <input type="text" name="grade" id="grade"
-                            class="form-control @error('grade') is-invalid @enderror" value="{{ $christian->grade }}"
-                            readonly>
-                        @error('grade')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="teacher_name">Teacher Name</label>
-                        <input type="text" name="teacher_name" id="teacher_name"
-                            class="form-control @error('teacher_name') is-invalid @enderror"
-                            value="{{ $christian->teacher_name }}" readonly>
-                        @error('teacher_name')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                    <!-- End of new input fields -->
-                    <a href="{{ url()->previous() }}" class="btn btn-secondary">Back</a>
                 </div>
-
+                <div class="form-group">
+                    <label for="grade">Grade</label>
+                    <input type="text" name="grade" id="grade" class="form-control @error('grade') is-invalid @enderror"
+                        value="{{ $christian->grade }}" readonly>
+                    @error('grade')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+                <div class="form-group">
+                    <label for="teacher_name">Teacher Name</label>
+                    <input type="text" name="teacher_name" id="teacher_name"
+                        class="form-control @error('teacher_name') is-invalid @enderror"
+                        value="{{ $christian->teacher_name }}" readonly>
+                    @error('teacher_name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+                <!-- End of new input fields -->
+                <a href="{{ url()->previous() }}" class="btn btn-secondary">Back</a>
             </div>
+
         </div>
     </div>
+</div>
 </div>
 @endsection

@@ -51,7 +51,7 @@ class ChristianController extends Controller
 
         Christian::create($request->all());
 
-        return redirect()->route('christians')->with('success', 'Christian created successfully');
+        return redirect()->route('christians')->with('success', 'Grades of Christian Created Successfully');
     }
 
     /**
@@ -100,7 +100,7 @@ class ChristianController extends Controller
         $christian = Christian::findOrFail($id);
         $christian->update($request->all());
 
-        return redirect()->route('christians')->with('success', 'Christian updated successfully');
+        return redirect()->route('christians')->with('success', 'Grades of Christian Updated Successfully');
     }
 
     
@@ -124,6 +124,6 @@ class ChristianController extends Controller
         $christian = Christian::findOrFail($id);
         $christian->delete();
 
-        return redirect()->route('christians')->with('success', 'Christian deleted successfully');
+        return redirect()->route('christians')->with('success', 'Grades of Christian Deleted Successfully');
     }
 }

@@ -54,9 +54,16 @@
                         <!-- New input fields -->
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" name="subject" id="subject"
-                                class="form-control @error('subject') is-invalid @enderror"
-                                value="{{ $christian->subject }}">
+                            <select name="subject" id="subject"
+                                class="form-control @error('subject') is-invalid @enderror">
+                                <option selected disabled>{{ $christian->subject }}</option>
+                                <option value="Philosopy">Philosopy</option>
+                                <option value="EAPP">EAPP</option>
+                                <option value="EAPP">Java</option>
+                                <option value="Entrep">Entrep</option>
+                                <option value="Emersion">Emersion</option>
+                                <option value="I-I-I">I-I-I</option>
+                            </select>
                             @error('subject')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>

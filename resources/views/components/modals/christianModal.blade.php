@@ -13,7 +13,7 @@
                 <th>Subject</th>
                 <th>Grade</th>
                 <th>Teacher</th>
-                <th>Print Action</th>
+                <th>Remark</th>
             </tr>
         </thead>
         <tbody>
