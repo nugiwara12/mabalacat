@@ -18,76 +18,57 @@
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('admin_assets/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin_assets/css/login.css') }}" rel="stylesheet">
 </head>
 
-<body class="bg-gradient-primary"
-    style="background-image: url('admin_assets/img/Crop2.png'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-6 col-lg-8 col-md-9">
-                <!-- Adjust the column width as needed -->
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <img src="admin_assets/img/logo.png" alt="logo">
-                                        @if(Session::has('success'))
-                                        <div class="alert alert-success" role="alert">
-                                            {{ Session::get('success') }}
-                                        </div>
-                                        @endif
-                                        <h1 class="h4 text-gray-900 mb-4">Login</h1>
-                                    </div>
-                                    <form action="{{ route('login') }}" method="POST" class="user">
-                                        @csrf
-                                        @if ($errors->any())
-                                        <div class="alert alert-danger">
-                                            <ul>
-                                                @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                                @endforeach
-                                            </ul>
-                                        </div>
-                                        @endif
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail" class="form-label">Email Address</label>
-                                            <input name="email" type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address...">
-                                        </div>
+<body>
+    <div class="wrapper">
+        <div class="text-center">
+            <img class="title-logo" src="admin_assets/img/logo.png" alt="logo">
+            @if(Session::has('success'))
+            <div class="alert alert-success" role="alert">
+                {{ Session::get('success') }}
+            </div>
+            @endif
+            <h1 class="h4 text-gray-900 mb-4">Login</h1>
+        </div>
+        <form action="{{ route('login') }}" method="POST" class="user">
+            @csrf
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+            <div class="form-group">
+                <label for="exampleInputEmail" class="form-label">Email Address</label>
+                <input name="email" type="email" class="form-control form-control-user" id="exampleInputEmail"
+                    aria-describedby="emailHelp" placeholder="Enter Email Address...">
+            </div>
 
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail" class="form-label">Password</label>
-                                            <input name="password" type="password"
-                                                class="form-control form-control-user" id="exampleInputPassword"
-                                                placeholder="Password">
-                                            <div id="passwordHelp" class="form-text">Never share your password with
-                                                anyone else.</div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input name="remember" type="checkbox" class="custom-control-input"
-                                                    id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember
-                                                    Me</label>
-                                            </div>
-                                        </div>
-
-                                        <button type="submit" class="btn btn-primary btn-block btn-user">Login</button>
-                                    </form><br>
-                                    <div class="text-center">
-                                        <a class="small" href="forgot-password">Forgot Password?</a>
-                                    </div>
-                                    <hr>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="form-group">
+                <label for="exampleInputEmail" class="form-label">Password</label>
+                <input name="password" type="password" class="form-control form-control-user" id="exampleInputPassword"
+                    placeholder="Password">
+                <div id="passwordHelp" class="form-text">Never share your password with anyone else.</div>
+            </div>
+            <div class="form-group">
+                <div class="custom-control custom-checkbox small">
+                    <input name="remember" type="checkbox" class="custom-control-input" id="customCheck">
+                    <label class="custom-control-label" for="customCheck">Remember Me</label>
                 </div>
             </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-user">Login</button>
+        </form><br>
+        <div class="text-center">
+            <a class="form-label" href="forgot-password">Forgot Password?</a>
         </div>
+        <hr>
+    </div>
     </div>
 
 

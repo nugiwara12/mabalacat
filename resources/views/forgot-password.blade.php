@@ -2,90 +2,55 @@
 <html lang="en">
 
 <head>
-    @include('components/header')
-    <title>VOUPRO: VOUCHER PROCESSING AND MONITORING SYSTEM</title>
+    <title>Student Portal</title>
     <link href="{{ asset('admin_assets/css/sb-admin-2.min.css') }}" rel="stylesheet">
     <!-- <link href="{{ asset('admin_assets/css/forgot-password.css') }}" rel="stylesheet"> -->
-    <link rel="shortcut icon" href="{{ URL::to('admin_assets/img/accounting.png') }}">
-    <link rel="shortcut icon" href="{{ URL::to('admin_assets/img/accounting.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ URL::to('admin_assets/img/logo.png') }}">
+    <link rel="shortcut icon" href="{{ URL::to('admin_assets/img/logo.png') }}" type="image/x-icon">
+    <!-- CSS -->
+    <link href="{{ asset('admin_assets/css/forgot.css') }}" rel="stylesheet">
 </head>
 
 <body>
 
 
 
-<body class="bg-gradient-primary" style="background-image: url('admin_assets/img/Crop2.png'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-xl-6 col-lg-4 col-md-4"> <!-- Adjust the column width as needed -->
-        <div class="card o-hidden border-0 shadow-lg my-5">
-          <div class="card-body p-0">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="p-5">
-                  <div class="text-center">
-                  <img src="admin_assets/img/accounting.png" alt="logo">
-                    <h1 class="h4 text-gray-900 mb-4">Forgot-password</h1>
-                    <p>Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.</p>
-                  </div>
-                  <form class="user" method="POST" action="/new-password">
-                                @if($errors->any())
-                                    <div class="alert alert-danger" role="alert">
-                                        @foreach($errors->all() as $err)
-                                            <li>{{ $err }}</li>
-                                        @endforeach
-                                    </div>
-                                @endif
-                                @if(isset($error))
-                                    <div class="alert alert-danger" role="alert">{{ $error }}</div>
-                                @endif
-                                @csrf
-                                <div class="form-group">
-                                    <input value="{{old('email')}}" type="email" class="form-control form-control-user"
-                                        id="exampleInputEmail" aria-describedby="emailHelp"
-                                        placeholder="Enter Email Address..." name="email" @error('email') style="border: 3px solid #F19E9EFF;" @enderror>
-                                </div>
-                                <input type="submit" class="btn btn-primary btn-user btn-block" value="Send OTP">
-                            </form>
-
-
-
-
-    <!-- <div class="container">
-        <div class="card o-hidden border-0 shadow-lg">
-            <div class="card-body p-0">
-                <div class="row">
-                    <div class="col-lg-2 d-none d-lg-block"></div>
-                    <div class="col-lg-6">
-                        <div class="card-content p-5">
-                            <div class="text-center">
-                                <h1 class="title">Forgot Your Password?</h1>
-                            </div>
-                            <form class="user" method="POST" action="/new-password">
-                                @if($errors->any())
-                                    <div class="alert alert-danger" role="alert">
-                                        @foreach($errors->all() as $err)
-                                            <li>{{ $err }}</li>
-                                        @endforeach
-                                    </div>
-                                @endif
-                                @if(isset($error))
-                                    <div class="alert alert-danger" role="alert">{{ $error }}</div>
-                                @endif
-                                @csrf
-                                <div class="form-group">
-                                    <input value="{{old('email')}}" type="email" class="form-control form-control-user"
-                                        id="exampleInputEmail" aria-describedby="emailHelp"
-                                        placeholder="Enter Email Address..." name="email" @error('email')style="border: 3px solid #F19E9EFF;" @enderror>
-                                </div>
-                                <input type="submit" class="btn btn-primary btn-user btn-block" value="Send OTP">
-                            </form>
-                        </div>
-                    </div>
+    <body>
+        <div class="wrapper">
+            <div class="text-center">
+                <img class="title-logo" src="admin_assets/img/logo.png" alt="logo">
+                @if(Session::has('success'))
+                <div class="alert alert-success" role="alert">
+                    {{ Session::get('success') }}
                 </div>
+                @endif
+                <h1 class="h4 text-gray-900 mb-4">Forgot Password</h1>
             </div>
+            <form class="user" method="POST" action="/new-password">
+                @csrf
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+                <div class="form-group">
+                    <label for="exampleInputEmail" class="form-label">Email Address</label>
+                    <input name="email" type="email" class="form-control form-control-user" id="exampleInputEmail"
+                        aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-user">Reset Password</button>
+            </form><br>
+            <div class="text-center">
+                <a class="form-label" href="login">Back to Login</a>
+            </div>
+            <hr>
         </div>
-    </div> -->
+    </body>
 
 </body>
 
