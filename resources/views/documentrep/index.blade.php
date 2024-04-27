@@ -1,15 +1,19 @@
 @extends('layouts.app1')
   
-@section('title', 'Document-Representative Users')
+@section('title', 'Post-Audit Users')
   
 @section('contents')
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-   
+
+
+    
+
     <div class="d-flex align-items-center justify-content-between">
-        <a href="{{ route('documentreps.create') }}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Add Document-Representative">Add Documentrep User</a>
+        <a href="{{ route('postaudits.create') }}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Add Post-Audit">Add Post Audit User</a>
     </div>
+    
     <hr />
     @if(Session::has('success'))
         <div class="alert alert-success" role="alert">
@@ -29,8 +33,8 @@
             </tr>
         </thead>
         <tbody>
-            @if($document_reps->count() > 0)
-                @foreach($document_reps as $rs)
+            @if($postaudits->count() > 0)
+                @foreach($postaudits as $rs)
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
                         <td class="align-middle">{{ $rs->Fname }}</td>
@@ -40,9 +44,9 @@
                         <td class="align-middle">{{ $rs->Role }}</td>  
                         <td class="align-middle">
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <a href="{{ route('documentreps.show', $rs->id) }}" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="View Details">Detail</a>
-                                <a href="{{ route('documentreps.edit', $rs->id)}}" type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Edit">Edit</a>
-                                <form action="{{ route('documentreps.destroy', $rs->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Delete?')"data-toggle="tooltip" data-placement="top" title="Delete">
+                                <a href="{{ route('postaudits.show', $rs->id) }}" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="View Details">Detail</a>
+                                <a href="{{ route('postaudits.edit', $rs->id)}}" type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Edit">Edit</a>
+                                <form action="{{ route('postaudits.destroy', $rs->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Delete?')" data-toggle="tooltip" data-placement="top" title="Delete">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger m-0">Delete</button>

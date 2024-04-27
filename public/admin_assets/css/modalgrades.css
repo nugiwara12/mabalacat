@@ -1,0 +1,66 @@
+.modal-dialog {
+    max-width: 70%;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+/* Styles for the card */
+.card {
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: calc(50% - 20px);
+}
+
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center content vertically */
+}
+
+
+.image-container {
+    margin-right: 10px;
+}
+
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+.card-text {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+.card-image {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; 
+}
+
+/* Align all table data elements */
+td {
+    vertical-align: middle;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}

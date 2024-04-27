@@ -7,7 +7,7 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('dashboard')}}">
         <div class="sidebar-brand-icon">
-            <img class="logo" src="{{url('admin_assets/img/accounting.png')}}" alt="logo">
+            <img class="logo" src="{{url('admin_assets/img/logo.png')}}" alt="logo">
         </div>
         <div class="sidebar-brand-text mx-3"><sup></sup></div>
     </a><br>
@@ -55,22 +55,13 @@
                     d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z" />
             </svg>
             <span class="sidebar-icon" style="color:#FFFFFF" data-toggle="tooltip" data-placement="top"
-                title="Table Name">Table Name</span>
+                title="Student Name">Student Name</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Role Types</h6>
-                <a class="collapse-item" href="{{ route('encoders') }}" data-toggle="tooltip" data-placement="top"
-                    title="Encoder">Encoder</a>
-                <a class="collapse-item" href="{{ route('preaudits') }}" data-toggle="tooltip" data-placement="top"
-                    title="Pre-Audit">Pre-Audit</a>
-                <a class="collapse-item" href="{{ route('postaudits') }}" data-toggle="tooltip" data-placement="top"
-                    title="Post-Audit">Post-Audit</a>
-                <a class="collapse-item" href="{{ route('releasings') }}" data-toggle="tooltip" data-placement="top"
-                    title="Releasing">Releasing</a>
-                <a class="collapse-item" href="{{ route('documentreps') }}" data-toggle="tooltip" data-placement="top"
-                    title="Document Representative">Document<br>Representative</a>
-                <!-- <a class="collapse-item" href="{{ route('users') }}">Chat Box</a> -->
+                <a class="collapse-item" href="{{ route('christians')}}" data-toggle="tooltip" data-placement="top"
+                    title="Christian Joseph Sarmiento">Christian Joseph Sarmiento</a>
                 <a class="collapse-item" href="{{ route('usermanagement') }}" data-toggle="tooltip" data-placement="top"
                     title="User Management">User Management</a>
             </div>
@@ -91,12 +82,12 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Voucher Records:</h6>
-                <a class="collapse-item" href="{{ route('generals') }}" data-toggle="tooltip" data-placement="top"
+                <a class="collapse-item" href="#" data-toggle="tooltip" data-placement="top"
                     title="General Funds">General Funds</a>
-                <a class="collapse-item" href="{{ route('special') }}" data-toggle="tooltip" data-placement="top"
+                <a class="collapse-item" href="#" data-toggle="tooltip" data-placement="top"
                     title="Special Educational Funds">Special <br> Educational <br> Funds</a>
-                <a class="collapse-item" href="{{ route('trust') }}" data-toggle="tooltip" data-placement="top"
-                    title="Trust Funds">Trust Funds</a>
+                <a class="collapse-item" href="#" data-toggle="tooltip" data-placement="top" title="Trust Funds">Trust
+                    Funds</a>
             </div>
         </div>
     </li>

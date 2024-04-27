@@ -6,6 +6,7 @@ use App\Http\Livewire\Chat\Chat;
 use App\Http\Livewire\Chat\Index;
 use App\Http\Livewire\Users;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ChristianController;
 
 use App\Http\Controllers\UserManagementController;
 use App\Http\Controllers\AuthController;
@@ -77,6 +78,18 @@ Route::controller(PreAuditController::class)->prefix('preaudits')->group(functio
     Route::put('edit/{id}', 'update')->name('preaudits.update');
     Route::delete('destroy/{id}', 'destroy')->name('preaudits.destroy');
 });
+
+
+Route::controller(ChristianController::class)->prefix('christians')->group(function () {
+    Route::get('', 'index')->name('christians');
+    Route::get('create', 'create')->name('christians.create');
+    Route::post('store', 'store')->name('christians.store');
+    Route::get('show/{id}', 'show')->name('christians.show');
+    Route::get('edit/{id}', 'edit')->name('christians.edit');
+    Route::put('edit/{id}', 'update')->name('christians.update');
+    Route::delete('destroy/{id}', 'destroy')->name('christians.destroy');
+});
+Route::get('/load-christians', 'ChristianController@loadChristians')->name('load.christians');
 
 // ----------------------------- Announcements ------------------------------//
 Route::prefix('posts')->name('posts.')->group(function () {
