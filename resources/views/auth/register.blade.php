@@ -153,7 +153,39 @@
                                                         name="role" id="role" required autofocus autocomplete="role">
                                                         <option selected disabled>User Types</option>
                                                         <option value="Admin">Admin</option>
-                                                        <option value="User">User</option>
+                                                        <option value="Student-1">Student-1</option>
+                                                        <option value="Student-2">Student-2</option>
+                                                        <option value="Student-3">Student-3</option>
+                                                        <option value="Student-4">Student-4</option>
+                                                        <option value="Student-5">Student-5</option>
+                                                        <option value="Student-6">Student-6</option>
+                                                        <option value="Student-7">Student-7</option>
+                                                        <option value="Student-8">Student-8</option>
+                                                        <option value="Student-9">Student-9</option>
+                                                        <option value="Student-11">Student-11</option>
+                                                        <option value="Student-12">Student-12</option>
+                                                        <option value="Student-13">Student-13</option>
+                                                        <option value="Student-14">Student-14</option>
+                                                        <option value="Student-15">Student-15</option>
+                                                        <option value="Student-16">Student-16</option>
+                                                        <option value="Student-17">Student-17</option>
+                                                        <option value="Student-18">Student-18</option>
+                                                        <option value="Student-19">Student-19</option>
+                                                        <option value="Student-20">Student-20</option>
+                                                        <option value="Student-21">Student-21</option>
+                                                        <option value="Student-22">Student-22</option>
+                                                        <option value="Student-23">Student-23</option>
+                                                        <option value="Student-24">Student-24</option>
+                                                        <option value="Student-25">Student-25</option>
+                                                        <option value="Student-26">Student-26</option>
+                                                        <option value="Student-27">Student-27</option>
+                                                        <option value="Student-28">Student-28</option>
+                                                        <option value="Student-29">Student-29</option>
+                                                        <option value="Student-30">Student-30</option>
+                                                        <option value="Student-31">Student-31</option>
+                                                        <option value="Student-32">Student-32</option>
+                                                        <option value="Student-33">Student-33</option>
+                                                        <option value="Student-34">Student-34</option>
 
                                                     </select>
                                                     <div class="form-control-icon">

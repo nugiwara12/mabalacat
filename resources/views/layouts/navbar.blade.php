@@ -37,7 +37,7 @@
         <li class="nav-item dropdown no-arrow mx-1">
             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-bell fa-fw"></i>
+                <!-- <i class="fas fa-bell fa-fw"></i> -->
                 <!-- Counter - Alerts -->
                 <!-- <span class="badge badge-danger badge-counter" id="notification-badge">{{ auth()->user()->posts->count() }}</span> -->
                 <span class="badge badge-danger badge-counter" id="notification-badge"></span>
@@ -118,7 +118,7 @@
         <!--  </div>-->
         <!--</li>-->
 
-        <!--<div class="topbar-divider d-none d-sm-block"></div>-->
+        <div class="topbar-divider d-none d-sm-block"></div>
 
 
 

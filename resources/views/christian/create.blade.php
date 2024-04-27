@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-15">
             <div class="card">
-                <div class="card-header">Grade of Christian Joseph Sarmiento</div>
+                <div class="card-header">Create Grade of Christian Joseph Sarmiento</div>
 
                 <div class="card-body">
                     <form action="{{ route('christians.store') }}" method="POST">

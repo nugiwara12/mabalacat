@@ -7,6 +7,7 @@ use App\Http\Livewire\Chat\Index;
 use App\Http\Livewire\Users;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ChristianController;
+use App\Http\Controllers\JuliusController;
 
 use App\Http\Controllers\UserManagementController;
 use App\Http\Controllers\AuthController;
@@ -68,18 +69,7 @@ Route::middleware('auth')->group(function (){
 // ----------------------------- ACTIVITY-LOGS -----------------------//
 Route::get('activity/log', [UserManagementController::class, 'activity'])->name('activity/log');
 
-// ----------------------------- PRE-AUDIT -----------------------//
-Route::controller(PreAuditController::class)->prefix('preaudits')->group(function () {
-    Route::get('', 'index')->name('preaudits');
-    Route::get('create', 'create')->name('preaudits.create');
-    Route::post('store', 'store')->name('preaudits.store');
-    Route::get('show/{id}', 'show')->name('preaudits.show');
-    Route::get('edit/{id}', 'edit')->name('preaudits.edit');
-    Route::put('edit/{id}', 'update')->name('preaudits.update');
-    Route::delete('destroy/{id}', 'destroy')->name('preaudits.destroy');
-});
-
-
+// ----------------------------- Christian -----------------------//
 Route::controller(ChristianController::class)->prefix('christians')->group(function () {
     Route::get('', 'index')->name('christians');
     Route::get('create', 'create')->name('christians.create');
@@ -89,7 +79,17 @@ Route::controller(ChristianController::class)->prefix('christians')->group(funct
     Route::put('edit/{id}', 'update')->name('christians.update');
     Route::delete('destroy/{id}', 'destroy')->name('christians.destroy');
 });
-Route::get('/load-christians', 'ChristianController@loadChristians')->name('load.christians');
+
+// ----------------------------- Julius -----------------------//
+Route::controller(JuliusController::class)->prefix('julius')->group(function () {
+    Route::get('', 'index')->name('julius');
+    Route::get('create', 'create')->name('julius.create');
+    Route::post('store', 'store')->name('julius.store');
+    Route::get('show/{id}', 'show')->name('julius.show');
+    Route::get('edit/{id}', 'edit')->name('julius.edit');
+    Route::put('edit/{id}', 'update')->name('julius.update');
+    Route::delete('destroy/{id}', 'destroy')->name('julius.destroy');
+});
 
 // ----------------------------- Announcements ------------------------------//
 Route::prefix('posts')->name('posts.')->group(function () {

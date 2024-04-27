@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Pagination\Paginator;
-use App\Models\Christian;
+use App\Models\Julius;
 
-class ChristianController extends Controller
+class JuliusController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class ChristianController extends Controller
      */
     public function index()
     {
-        $christians = Christian::orderBy('created_at', 'DESC')->get();
-        return view('christian.index', compact('christians'));
+        $juliuses = Julius::orderBy('created_at', 'DESC')->get();
+        return view('julius.index', compact('juliuses'));
     }
 
     /**
@@ -28,7 +28,7 @@ class ChristianController extends Controller
      */
     public function create()
     {
-        return view('christian.create');
+        return view('julius.create');
     }
 
     /**
@@ -49,9 +49,9 @@ class ChristianController extends Controller
             'teacher_name' => ['nullable', 'string', 'max:255'],
         ]);
 
-        Christian::create($request->all());
+        Julius::create($request->all());
 
-        return redirect()->route('christians')->with('success', 'Grades of Christian Created Successfully');
+        return redirect()->route('julius')->with('success', 'Grades of Julius Created Successfully');
     }
 
     /**
@@ -62,8 +62,8 @@ class ChristianController extends Controller
      */
     public function show($id)
     {
-        $christian = Christian::findOrFail($id);
-        return view('christian.show', compact('christian'));
+        $juliuses = Julius::findOrFail($id);
+        return view('julius.show', compact('juliuses'));
     }
 
     /**
@@ -74,8 +74,8 @@ class ChristianController extends Controller
      */
     public function edit($id)
     {
-        $christian = Christian::findOrFail($id);
-        return view('christian.edit', compact('christian'));
+        $juliuses = Julius::findOrFail($id);
+        return view('julius.edit', compact('juliuses'));
     }
 
     /**
@@ -97,11 +97,12 @@ class ChristianController extends Controller
             'teacher_name' => ['nullable', 'string', 'max:255'],
         ]);
 
-        $christian = Christian::findOrFail($id);
-        $christian->update($request->all());
+        $juliuses = Julius::findOrFail($id);
+        $juliuses->update($request->all());
 
-        return redirect()->route('christians')->with('success', 'Grades of Christian Updated Successfully');
+        return redirect()->route('julius')->with('success', 'Grades of Julius Updated Successfully');
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -111,9 +112,9 @@ class ChristianController extends Controller
      */
     public function destroy($id)
     {
-        $christian = Christian::findOrFail($id);
-        $christian->delete();
+        $juliuses = Julius::findOrFail($id);
+        $juliuses->delete();
 
-        return redirect()->route('christians')->with('success', 'Grades of Christian Deleted Successfully');
+        return redirect()->route('julius')->with('success', 'Grades of Julius Deleted Successfully');
     }
 }

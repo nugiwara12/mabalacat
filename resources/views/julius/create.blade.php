@@ -1,23 +1,19 @@
 @extends('layouts.app1')
 
-@section('title', 'Edit Christian Josepth Sarmiento Grades')
-
 @section('contents')
-<div class="container mb-4">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-15">
             <div class="card">
-                <div class="card-header">Grade of Christian Joseph Sarmiento</div>
+                <div class="card-header">Create Grade of Julius</div>
 
                 <div class="card-body">
-                    <form action="{{ route('christians.update', $christian->id) }}" method="POST">
+                    <form action="{{ route('julius.store') }}" method="POST">
                         @csrf
-                        @method('PUT')
                         <div class="form-group">
                             <label for="username">Full Name</label>
                             <input type="text" name="username" id="username"
-                                class="form-control @error('username') is-invalid @enderror"
-                                value="{{ $christian->username }}">
+                                class="form-control @error('username') is-invalid @enderror" required>
                             @error('username')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -27,8 +23,7 @@
                         <div class="form-group">
                             <label for="email_address">Email Address</label>
                             <input type="email" name="email_address" id="email_address"
-                                class="form-control @error('email_address') is-invalid @enderror"
-                                value="{{ $christian->email_address }}">
+                                class="form-control @error('email_address') is-invalid @enderror" required>
                             @error('email_address')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -43,8 +38,7 @@
                         <div class="form-group">
                             <label for="LRN_number">LRN Number</label>
                             <input type="text" name="LRN_number" id="LRN_number"
-                                class="form-control @error('LRN_number') is-invalid @enderror"
-                                value="{{ $christian->LRN_number }}">
+                                class="form-control @error('LRN_number') is-invalid @enderror" required>
                             @error('LRN_number')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -56,7 +50,7 @@
                             <label for="subject">Subject</label>
                             <select name="subject" id="subject"
                                 class="form-control @error('subject') is-invalid @enderror">
-                                <option selected disabled>{{ $christian->subject }}</option>
+                                <option value="" selected disabled>Select Subject</option>
                                 <option value="Philosopy">Philosopy</option>
                                 <option value="EAPP">EAPP</option>
                                 <option value="EAPP">Java</option>
@@ -70,11 +64,11 @@
                             </span>
                             @enderror
                         </div>
+
                         <div class="form-group">
                             <label for="grade">Grade</label>
                             <input type="text" name="grade" id="grade"
-                                class="form-control @error('grade') is-invalid @enderror"
-                                value="{{ $christian->grade }}">
+                                class="form-control @error('grade') is-invalid @enderror">
                             @error('grade')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -84,8 +78,7 @@
                         <div class="form-group">
                             <label for="teacher_name">Teacher Name</label>
                             <input type="text" name="teacher_name" id="teacher_name"
-                                class="form-control @error('teacher_name') is-invalid @enderror"
-                                value="{{ $christian->teacher_name }}">
+                                class="form-control @error('teacher_name') is-invalid @enderror">
                             @error('teacher_name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -93,7 +86,7 @@
                             @enderror
                         </div>
                         <!-- End of new input fields -->
-                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
 
