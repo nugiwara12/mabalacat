@@ -5,15 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Livewire\Chat\Chat;
 use App\Http\Livewire\Chat\Index;
 use App\Http\Livewire\Users;
-use App\Http\Controllers\PreAuditController;
-use App\Http\Controllers\PostAuditController;
-use App\Http\Controllers\EncoderController;
-use App\Http\Controllers\DocumentRepController;
-use App\Http\Controllers\ReleasingController;
 use App\Http\Controllers\PostsController;
-use App\Http\Controllers\GeneralController;
-use App\Http\Controllers\SpecialController;
-use App\Http\Controllers\TrustController;
 
 use App\Http\Controllers\UserManagementController;
 use App\Http\Controllers\AuthController;
@@ -85,46 +77,7 @@ Route::controller(PreAuditController::class)->prefix('preaudits')->group(functio
     Route::put('edit/{id}', 'update')->name('preaudits.update');
     Route::delete('destroy/{id}', 'destroy')->name('preaudits.destroy');
 });
-// ----------------------------- POST-AUDIT -----------------------//
-Route::controller(PostAuditController::class)->prefix('postaudits')->group(function () {
-    Route::get('', 'index')->name('postaudits');
-    Route::get('create', 'create')->name('postaudits.create');
-    Route::post('store', 'store')->name('postaudits.store');
-    Route::get('show/{id}', 'show')->name('postaudits.show');
-    Route::get('edit/{id}', 'edit')->name('postaudits.edit');
-    Route::put('edit/{id}', 'update')->name('postaudits.update');
-    Route::delete('destroy/{id}', 'destroy')->name('postaudits.destroy');
-});
-// ----------------------------- ENCODER -----------------------//
-Route::controller(EncoderController::class)->prefix('encoders')->group(function () {
-    Route::get('', 'index')->name('encoders');
-    Route::get('create', 'create')->name('encoders.create');
-    Route::post('store', 'store')->name('encoders.store');
-    Route::get('show/{id}', 'show')->name('encoders.show');
-    Route::get('edit/{id}', 'edit')->name('encoders.edit');
-    Route::put('edit/{id}', 'update')->name('encoders.update');
-    Route::delete('destroy/{id}', 'destroy')->name('encoders.destroy');
-});
-// ----------------------------- DOCUMENT-REPRESENTATIVE -----------------------//
-Route::controller(DocumentRepController::class)->prefix('documentreps')->group(function () {
-    Route::get('', 'index')->name('documentreps');
-    Route::get('create', 'create')->name('documentreps.create');
-    Route::post('store', 'store')->name('documentreps.store');
-    Route::get('show/{id}', 'show')->name('documentreps.show');
-    Route::get('edit/{id}', 'edit')->name('documentreps.edit');
-    Route::put('edit/{id}', 'update')->name('documentreps.update');
-    Route::delete('destroy/{id}', 'destroy')->name('documentreps.destroy');
-});
-// ----------------------------- RELEASING -----------------------//
-Route::controller(ReleasingController::class)->prefix('releasings')->group(function () {
-    Route::get('', 'index')->name('releasings');
-    Route::get('create', 'create')->name('releasings.create');
-    Route::post('store', 'store')->name('releasings.store');
-    Route::get('show/{id}', 'show')->name('releasings.show');
-    Route::get('edit/{id}', 'edit')->name('releasings.edit');
-    Route::put('edit/{id}', 'update')->name('releasings.update');
-    Route::delete('destroy/{id}', 'destroy')->name('releasings.destroy');
-});
+
 // ----------------------------- Announcements ------------------------------//
 Route::prefix('posts')->name('posts.')->group(function () {
     Route::get('/', [PostsController::class, 'index'])->name('index');
@@ -134,50 +87,6 @@ Route::prefix('posts')->name('posts.')->group(function () {
     Route::delete('destroy/{post}', [PostsController::class, 'destroy'])->name('destroy');
 });
 
-
-// ----------------------------- GENERAL FUNDS -----------------------//
-Route::controller(GeneralController::class)->prefix('general')->group(function () {
-    Route::get('', 'index')->name('generals');
-    Route::get('create', 'create')->name('general.create');
-    Route::post('store', 'store')->name('general.store');
-    Route::get('show/{id}', 'show')->name('general.show');
-    Route::get('edit/{id}', 'edit')->name('general.edit');
-    Route::put('edit/{id}', 'update')->name('general.update');
-    Route::delete('destroy/{id}', 'destroy')->name('general.destroy');
-});
-
-Route::get('/generals/{id}/show', [GeneralController::class, 'show']);
-Route::get('/generals/{id}/show/pdf', [GeneralController::class, 'generatePdf'])->name('generals.show.pdf');
-
-
-
-// ----------------------------- SPECIAL EDUCATIONAL FUNDS -----------------------//
-Route::controller(SpecialController::class)->prefix('special')->group(function () {
-    Route::get('', 'index')->name('special');
-    Route::get('create', 'create')->name('special.create');
-    Route::post('store', 'store')->name('special.store');
-    Route::get('show/{id}', 'show')->name('special.show');
-    Route::get('edit/{id}', 'edit')->name('special.edit');
-    Route::put('edit/{id}', 'update')->name('special.update');
-    Route::delete('destroy/{id}', 'destroy')->name('special.destroy');
-});
-
-Route::get('/special/{id}/show', [SpecialController::class, 'show']);
-Route::get('/special/{id}/show/pdf', [SpecialController::class, 'generatePdf'])->name('special.show.pdf');
-
-// ----------------------------- TRUST FUNDS -----------------------//
-Route::controller(TrustController::class)->prefix('trust')->group(function () {
-    Route::get('', 'index')->name('trust');
-    Route::get('create', 'create')->name('trust.create');
-    Route::post('store', 'store')->name('trust.store');
-    Route::get('show/{id}', 'show')->name('trust.show');
-    Route::get('edit/{id}', 'edit')->name('trust.edit');
-    Route::put('edit/{id}', 'update')->name('trust.update');
-    Route::delete('destroy/{id}', 'destroy')->name('trust.destroy');
-});
-
-Route::get('/trust/{id}/show', [TrustController::class, 'show']);
-Route::get('/trust/{id}/show/pdf', [TrustController::class, 'generatePdf'])->name('trust.show.pdf');
 
 // ----------------------------- User management -----------------------//
 Route::controller(UserManagementController::class)->prefix('usermanagement')->group(function () {
@@ -215,4 +124,3 @@ route::get('test-mail',function(){
 });
 Route::get('/new-password', [AuthController::class, 'newPassword'])->name('new-password');
 }); //end of prvent back log
-
