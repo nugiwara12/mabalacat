@@ -8,6 +8,7 @@ use App\Http\Livewire\Users;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ChristianController;
 use App\Http\Controllers\JuliusController;
+use App\Http\Controllers\JoshuaController;
 
 use App\Http\Controllers\UserManagementController;
 use App\Http\Controllers\AuthController;
@@ -89,6 +90,17 @@ Route::controller(JuliusController::class)->prefix('julius')->group(function () 
     Route::get('edit/{id}', 'edit')->name('julius.edit');
     Route::put('edit/{id}', 'update')->name('julius.update');
     Route::delete('destroy/{id}', 'destroy')->name('julius.destroy');
+});
+
+// ----------------------------- Joshua -----------------------//
+Route::controller(JoshuaController::class)->prefix('joshuas')->group(function () {
+    Route::get('', 'index')->name('joshuas');
+    Route::get('create', 'create')->name('joshuas.create');
+    Route::post('store', 'store')->name('joshuas.store');
+    Route::get('show/{id}', 'show')->name('joshuas.show');
+    Route::get('edit/{id}', 'edit')->name('joshuas.edit');
+    Route::put('edit/{id}', 'update')->name('joshuas.update');
+    Route::delete('destroy/{id}', 'destroy')->name('joshuas.destroy');
 });
 
 // ----------------------------- Announcements ------------------------------//

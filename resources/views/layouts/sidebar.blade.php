@@ -64,6 +64,8 @@
                     title="Christian Joseph Sarmiento">Christian Joseph <br> Sarmiento</a>
                 <a class="collapse-item" href="{{ route('julius')}}" data-toggle="tooltip" data-placement="top"
                     title="Julius">Julius</a>
+                <a class="collapse-item" href="{{ route('joshuas')}}" data-toggle="tooltip" data-placement="top"
+                    title="Joshuas">Joshuas</a>
                 <a class="collapse-item" href="{{ route('usermanagement') }}" data-toggle="tooltip" data-placement="top"
                     title="User Management">User Management</a>
             </div>

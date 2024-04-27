@@ -1,6 +1,6 @@
 @extends('layouts.app1')
 
-@section('title', 'Christian Josepth Sarmiento')
+@section('title', 'Joshua')
 
 @section('contents')
 
@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="{{ asset('admin_assets/css/modalgrades.css') }}">
 
 <div class="d-flex align-items-center justify-content-between">
-    <a href="{{ route('christians.create') }}" class="btn btn-primary" data-toggle="tooltip" data-placement="top"
+    <a href="{{ route('joshuas.create') }}" class="btn btn-primary" data-toggle="tooltip" data-placement="top"
         title="Add Grades">Add Grades</a>
 </div>
 
@@ -36,8 +36,8 @@
             </tr>
         </thead>
         <tbody>
-            @if($christians->count() > 0)
-            @foreach($christians as $rs)
+            @if($joshuas->count() > 0)
+            @foreach($joshuas as $rs)
             <tr>
                 <td class="align-middle">{{ $loop->iteration }}</td>
                 <td class="align-middle">{{ $rs->username }}</td>
@@ -51,15 +51,16 @@
                 <td class="align-middle">
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button type="button" class="btn btn-secondary detailBtn" data-toggle="modal"
-                            data-target="#detailModal" data-rsid="{{ $rs->id }}" data-placement="top"
+                            data-target="#joshuaModal" data-rsid="{{ $rs->id }}" data-placement="top"
                             title="View Details">
                             Detail
                         </button>
-                        <a href="{{ route('christians.edit', $rs->id)}}" type="button" class="btn btn-warning"
+
+                        <a href="{{ route('joshuas.edit', $rs->id)}}" type="button" class="btn btn-warning"
                             data-toggle="tooltip" data-placement="top" title="Edit">Edit</a>
-                        <form action="{{ route('christians.destroy', $rs->id) }}" method="POST"
-                            class="btn btn-danger p-0" onsubmit="return confirm('Delete?')" data-toggle="tooltip"
-                            data-placement="top" title="Delete">
+                        <form action="{{ route('joshuas.destroy', $rs->id) }}" method="POST" class="btn btn-danger p-0"
+                            onsubmit="return confirm('Delete?')" data-toggle="tooltip" data-placement="top"
+                            title="Delete">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger m-0">Delete</button>
@@ -70,7 +71,7 @@
             @endforeach
             @else
             <tr>
-                <td colspan="9" class="text-center">No Christians found.</td>
+                <td colspan="9" class="text-center">No Grades found.</td>
             </tr>
             @endif
         </tbody>
@@ -78,19 +79,19 @@
 </div>
 
 
-<div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="joshuaModal" tabindex="-1" role="dialog" aria-labelledby="joshuaModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Grades of Christian</h5>
+                <h5 class="modal-title" id="joshuaModalLabel">Grades of Joshua</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <div class="flex-container" id="christiansContainer">
-                    @include('components.modals.christianModal')
+                <div class="flex-container" id="joshuaContainer">
+                    @include('components.modals.joshuaModal')
                 </div>
             </div>
             <div class="modal-footer">
@@ -99,7 +100,6 @@
         </div>
     </div>
 </div>
-
 
 <footer>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.js"></script>
