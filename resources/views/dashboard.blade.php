@@ -30,9 +30,9 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img alt="..." class="d-block w-100" src="{{ asset('admin_assets/logo.jpg') }}">
+                <img alt="..." class="d-block w-100" src="{{ asset('admin_assets/img/gif/school-penguin.gif') }}">
                 <div class="carousel-caption">
-                    <h5>Mabalacat City Accounting Office</h5>
+                    <!-- <h5>Mabalacat City Accounting Office</h5>
                     <p>
                         To ensure that the growth trajectory of Mabalacat City resulting from competitive economic
                         performance
@@ -40,14 +40,14 @@
                         the community; thus,
                         the thematic priorities of the Local Government Unit of Mabalacat are set forth in the following
                         pillars of development.
-                    </p>
+                    </p> -->
 
                 </div>
             </div>
             <div class="carousel-item">
-                <img alt="..." class="d-block w-100" src="{{ asset('admin_assets/img/logo.png') }}">
+                <img alt="..." class="d-block w-100" src="{{ asset('admin_assets/img/gif/school-day.gif') }}">
                 <div class="carousel-caption">
-                    <h5>Mabalacat City Accounting Office</h5>
+                    <!-- <h5>Mabalacat City Accounting Office</h5>
                     <p>
                         To ensure that the growth trajectory of Mabalacat City resulting from competitive economic
                         performance
@@ -55,14 +55,14 @@
                         the community; thus,
                         the thematic priorities of the Local Government Unit of Mabalacat are set forth in the following
                         pillars of development.
-                    </p>
+                    </p> -->
 
                 </div>
             </div>
             <div class="carousel-item">
-                <img alt="..." class="d-block w-100" src="{{ asset('admin_assets/img/Crop2.png') }}">
+                <img alt="..." class="d-block w-100" src="{{ asset('admin_assets/img/gif/school-zone.gif') }}">
                 <div class="carousel-caption">
-                    <h5>Mabalacat City Accounting Office</h5>
+                    <!-- <h5>Mabalacat City Accounting Office</h5>
                     <p>
                         To ensure that the growth trajectory of Mabalacat City resulting from competitive economic
                         performance
@@ -70,7 +70,7 @@
                         the community; thus,
                         the thematic priorities of the Local Government Unit of Mabalacat are set forth in the following
                         pillars of development.
-                    </p>
+                    </p> -->
                 </div>
             </div>
         </div><button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleIndicators"
