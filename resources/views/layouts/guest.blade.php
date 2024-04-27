@@ -13,8 +13,8 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-    <link rel="shortcut icon" href="{{ URL::to('admin_assets/img/accounting.png') }}">
-    <link rel="shortcut icon" href="{{ URL::to('admin_assets/img/accounting.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ URL::to('admin_assets/img/logo.png') }}">
+    <link rel="shortcut icon" href="{{ URL::to('admin_assets/img/logo.png') }}" type="image/x-icon">
 
     <!--STYLE-CSS -->
     <link rel="stylesheet" href="{{ asset('admin_assets/css/logo.css') }}">
@@ -26,7 +26,7 @@
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
         <div>
             <a href="/">
-                <img class="login-logo" src="{{url('admin_assets/img/accounting.png')}}" alt="logo">
+                <img class="login-logo" src="{{url('admin_assets/img/logo.png')}}" alt="logo">
             </a>
         </div>
 
